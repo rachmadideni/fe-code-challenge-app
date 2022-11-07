@@ -1,15 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from "react-router-dom";
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from './reportWebVitals';
+
+import App from './App';
+import ColorModeContext from './context';
+import theme from './styles/theme';
+import "@fontsource/nunito-sans"
+
+const Main = () => {
+  const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+  const colorMode = React.useMemo(() => ({
+    toggleColorMode: () => {
+      setMode(prevMode => prevMode === 'light' ? 'dark' : 'light');
+    }
+  }), [])
+
+  const customTheme = React.useMemo(() => theme(mode), [mode])
+
+  return (
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={customTheme}>
+        <CssBaseline enableColorScheme />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  )
+}
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Main />
   </React.StrictMode>
 );
 

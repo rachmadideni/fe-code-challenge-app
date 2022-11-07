@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Outlet } from "react-router-dom";
+import { Container } from "@mui/material";
+import PageContainer from "./layout";
+import Navbar from "./components/Navbar";
 
+import Main from "./container/Main";
+import Detail from "./container/Detail";
+import Border from "./container/Border";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <PageContainer>
+            <Navbar />
+            <Container
+                maxWidth="desktop"
+                sx={{
+                    padding: "2rem 2rem 2rem 2rem",
+                    minHeight: "100vh",
+                }}
+            >
+                <Routes>
+                    <Route path="/" element={<Main />} />
+                    <Route path="detail" element={<Detail />}>
+                        <Route path=":countryName" element={<Detail />} />
+                    </Route>
+                    <Route path="border" element={<Border />}>
+                        <Route path=":countryCode" element={<Border />} />
+                    </Route>
+                </Routes>
+
+                <Outlet />
+            </Container>
+        </PageContainer>
+    );
 }
 
 export default App;
