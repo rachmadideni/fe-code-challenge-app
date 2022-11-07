@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# HERE TO CREATE!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Design preview for the coding challenge](./public/desktop-preview.jpg)
 
-## Available Scripts
+## Welcome! 👋
 
-In the project directory, you can run:
+Thanks for checking out this front-end coding challenge.
 
-### `npm start`
+**To do this challenge, you need a good understanding of JavaScript and ReactJS.**
+**Use React Hooks is required.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## The challenge
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Your challenge is to integrate with the [REST Countries API](https://restcountries.com/) to pull country data and display it like in the designs.
 
-### `npm test`
+Please use [ReactJS], [Typescript] and [Material UI](https://mui.com/) on the front-end. You have complete control over which packages you use to do things like make HTTP requests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Your users should be able to:
 
-### `npm run build`
+- See all countries from the API on the homepage
+- Search for a country using an `input` field
+- Filter countries by region
+- Click on a country to see more detailed information on a separate page
+- Click through to the border countries on the detail page
+- Toggle the color scheme between light and dark mode _(optional, but nice to have)_
+- Use React Hook
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Where to find everything
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Your task is to build out the project to the designs inside the `/design` folder.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In this challenge, you will find mobile and desktop designs in light and dark mode color schemes for both pages.
 
-### `npm run eject`
+The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+There are no assets for this challenge, as the country flags will be pulled from the [REST Countries API](https://restcountries.com/) and you can use an icon font library for the icons.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Building your project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Please feel free to do any optimization to make your project stronger!
 
-## Learn More
+We are here to create, so don’t be afraid of doing something else with data available, in case you think it’s a good idea.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Statement on test content
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**The content of this document is only used for front-end developer ability testing. No legal responsibility is assumed for the data content provided by the third-party interface.**
