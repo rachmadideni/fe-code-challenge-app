@@ -102,7 +102,6 @@ function Main() {
                 </Grid>
             </Grid>
             <Grid container direction="row" spacing={7}>
-                {isLoading && <div>Loading countries ...</div>}
                 {filteredCountries?.length > 0
                     ? filteredCountries.map((country: any, id: number) => (
                         <Grid key={id} item mobile={12} desktop={3}>
